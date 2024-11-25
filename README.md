@@ -1,8 +1,8 @@
 **CRUD Operations with ASP.NET Core** <br> <br>
-Overview
+Overview : <b>
 This project serves as a foundational setup in ASP.NET Core, focusing on CRUD (Create, Read, Update, Delete) operations with a SQL Server database. The work reflects my initial steps in learning .NET technologies and successfully implementing database integration.
 
-**Setup Required**
+**Setup Required** <br><br>
 1..NET SDK
 2.Visual Studio
 3.SQL Server
