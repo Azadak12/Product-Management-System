@@ -3,10 +3,10 @@ Overview : <b>
 This project serves as a foundational setup in ASP.NET Core, focusing on CRUD (Create, Read, Update, Delete) operations with a SQL Server database. The work reflects my initial steps in learning .NET technologies and successfully implementing database integration.
 
 **Setup Required** <br><br>
-1. .NET SDK
-2.Visual Studio
-3.SQL Server
-4.Database Configuration
+1. .NET SDK <br>
+2.Visual Studio <br>
+3.SQL Server<br>
+4.Database Configuration <br>
 
 Create and set up your database in SQL Server to match the schema defined in your project.
 Use Entity Framework Core for database migrations and schema management.
