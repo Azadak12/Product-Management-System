@@ -1,0 +1,40 @@
+﻿@page
+@model YourNamespace.Pages.Clients.IndexModel
+@{
+    ViewData["Title"] = "Clients";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<!-- Button to Add New Client -->
+<a class="btn btn-primary" asp-page="Create">New Client</a>
+
+<!-- Clients List Table -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model.Clients)
+        {
+            <tr>
+                <td>@client.Id</td>
+                <td>@client.Name</td>
+                <td>@client.Email</td>
+                <td>@client.Phone</td>
+                <td>@client.Address</td>
+                <td>
+                    <a class="btn btn-warning" asp-page="Edit" asp-route-id="@client.Id">Edit</a>
+                    <a class="btn btn-danger" asp-page="Delete" asp-route-id="@client.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

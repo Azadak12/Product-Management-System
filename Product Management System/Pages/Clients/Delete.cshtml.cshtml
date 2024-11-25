@@ -1,0 +1,28 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Data.SqlClient;
+
+namespace Product_Management_System.Pages.Clients
+{
+    public class DeleteModel : PageModel
+    {
+        public IActionResult OnPost(int id)
+        {
+            string connectionString = "Data Source=DELL-LATITUDE-7\\SQLEXPRESS;Initial Catalog=myqsl;Integrated Security=True;Trust Server Certificate=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "DELETE FROM clients WHERE id = @Id";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            return RedirectToPage("/Clients/Index");
+        }
+    }
+}
